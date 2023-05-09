@@ -1,0 +1,241 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+<title>Mathematics</title>
+</head>
+<body>
+<header>
+<div id="brand">Coding Is Fun</div>
+<nav>
+<ul>
+<li ><a href="index.html">Home</a></li>
+<li><a href="/about">About</a></li>
+
+</ul>
+</nav>
+
+<div id="hamburger-icon"
+onclick="toggleMobileMenu(this)">
+
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+<ul class="mobile-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</div>
+ </header>
+ <svg  width="24" height="24" viewBox="0 0 24 24" id="keyboard-arrow-right"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg>
+ <div id="row">
+    
+<svg width="24" height="24" viewBox="0 0 24 24" id="keyboard-arrow-left"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"></path></svg>
+    <div id="column">    
+<a style="color:lime" href="page.html">Calculators</a>
+ <a href="formu.html">Formulas</a>
+     </div>
+     <div id="content">
+   
+    <div>
+       <li> <a style="color:cyan" href="calto.html">Basic Calculator</a></li></br>
+      <li>  <a style="color:cyan" href="circlecalc.html">Circle Area/perimeter Finder</a></li></br>
+      <li><a style="color:cyan" href="squa.html">Square Area/perimeter Finder</a></li></br>
+      <li><a style="color:cyan" href="facto.html">Factorial finder</a></li></br>
+      <li><a style="color:cyan" href="rectacalc.html">Rectangle Area/perimeter finder</a></li>
+  
+   
+     </div 
+ </div>
+   
+   
+    
+   
+</body>
+<script>
+    
+    function toggleMobileMenu(menu) {
+  menu.classList.toggle("open");  
+}
+</script>
+<style>
+    *{
+margin: 0;    
+padding: 0;
+box-sizing:border-box;
+}
+
+ header a {
+text-decoration: none;
+}
+header {
+padding: 0 20px;
+background-color: #1d1f1d;
+height: 50px;
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid cyan;
+background: transparent;
+}
+#brand{
+    font-weight:bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: cyan;
+     text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #09c372,
+            0 0 40px #09c372,
+            0 0 80px #09c372,
+            0 0 160px #09c372
+           
+    }
+#keyboard-arrow-right{
+       display:none;
+       
+}
+
+  
+#keyboard-arrow-left{
+        display:none;    
+   
+}    
+#hom{
+    color:red;
+}
+
+ul {
+ list-style: none;
+ height: 100%;
+ display: flex;
+align-items: center;
+justify-content: space-around;
+
+}
+ul a {
+color:cyan;
+}
+
+ul li {
+padding: 5px;
+margin-left: 10px;
+}
+
+ul li:hover {
+transform: scale(1.1);
+transition: 0.3s;
+}
+
+
+
+#hamburger-icon{
+
+margin: auto 0;
+display: none;
+cursor: pointer;
+}
+
+#hamburger-icon div {
+width: 35px;
+height: 3px; background-color: white;
+margin: 6px 0;
+transition: 0.4s;
+
+}
+
+.open .bar1 {
+-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+ transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+opacity: 0;
+}
+
+.open .bar3 {
+-webkit-transform: rotate(45deg) translate(-6px, -8px);
+transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+ .mobile-menu {
+display: none;
+position: absolute;
+top: 50px;
+left: 0;
+height: calc(100vh - 50px);
+width: 100%;
+}
+   #row{
+    display:flex;
+    height: 3vh;
+    } 
+    
+#column{
+      height: 100vh;
+      width: 15%;
+      padding:10px; 
+      border-right: 1px solid cyan;
+      background-color: #1d1f1d; 
+      background:transparent;
+     }
+ #column a{
+     color:white;
+     text-decoration:none;
+ 
+ }
+ #content{
+     width:85%;
+       padding:10px; 
+ }
+   
+    body{       
+  
+  background-image: url("/storage/emulated/0/DCIM/Creative/IMG_20230508_154153.jpg");
+max-height: 100vh;
+  height: 100%;
+  width:100%;
+  margin: 0; 
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+        }
+ #start{
+     background:transparent;
+     display:flex;
+align-items:center;
+transform: translate(440px,-35vh);
+justify-content:center;
+color: #fff;
+border:5px solid cyan;
+border-radius: 40%;
+ }   
+ @media only screen and (max-width: 600px) {
+header nav{
+display: none;
+}
+#hamburger-icon{
+    display:block;
+}
+#column{
+    display:none;
+}
+#content{
+    display:none;
+}
+#keyboard-arrow-right{
+
+    display:block;
+}
+}
+
+</style>
+ </html>

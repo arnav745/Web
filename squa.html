@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+   
+    <div class="container"> <h3 id="haj">Find area and perimeter of Square</h3>
+        <h4 >enter side :<br />
+            <input type="number" id="in" placeholder="enter side"
+            value="0" /></h4>
+        <input type="button" id="btn" value="click" /> 
+        <h5>side : <span id="rad"></span></h5>
+        <h5>area : <span id="area"></span></h5>
+        <h5>perimeter : <span id="per"></span></h5>
+       
+   </div>
+   
+</body>
+<style type="text/css" media="all">
+    * {
+        margin: 5px;
+        padding: 5px;
+       
+           }
+#haj{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+    body {
+        background-color:#343434;
+        color:#fff;
+      
+    }
+.container{
+      border:3px solid white;
+ border-radius: 50px;
+ margin: 20px;
+ }
+    #btn {
+      
+   
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 12px;
+
+    }
+    #in {
+        border: 1px solid black;
+        border-radius: 50px;
+    
+
+    }
+</style>
+<script type="text/javascript" charset="utf-8">
+    let r = document.getElementById("in");
+    let out = document.getElementById("rad");
+    let btn = document.getElementById("btn");
+    let out2 = document.getElementById("area");
+    let out3 = document.getElementById("per");
+  
+  
+    
+    
+    function outp() {
+
+        out.innerHTML = r.value;
+    }
+
+    btn.addEventListener('click', outp);
+
+
+    function area() {
+        let a = r.value **2;
+        out2.innerHTML = a;
+    }
+
+    btn.addEventListener('click', area);
+
+
+    function peri() {
+        let p = 4*r.value;
+        out3.innerHTML = p;
+
+    }
+
+    btn.addEventListener('click', peri);
+
+   function valid() {
+        if( r.value < 0){
+      
+          out2.innerHTML="side must be positive number";
+          out3.innerHTML="side must be positive number";
+    
+            
+      }  
+    }
+       btn.addEventListener('click', valid);
+</script>
+</html>

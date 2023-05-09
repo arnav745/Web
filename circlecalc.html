@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+   
+    <div class="container"> <h3 id="haj">Find area and perimeter of circle</h3>
+        <h4 >enter radius :<br />
+            <input type="number" id="in" placeholder="enter radius"
+            value="" /></h4>
+        <input type="button" id="btn" value="click" /> <h5>value of Pi taken : <span id="ppi"></span></h5>
+        <h5>radius : <span id="rad"></span></h5>
+        <h5>area : <span id="area"></span></h5>
+        <h5>circumference : <span id="per"></span></h5>
+       
+   </div>
+   
+</body>
+<style type="text/css" media="all">
+    * {
+        margin: 5px;
+        padding: 5px;
+       
+           }
+#haj{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+    body {
+        background-color:#343434;
+        color:#fff;
+      
+    }
+.container{
+      border:3px solid white;
+ border-radius: 50px;
+ margin: 20px;
+ }
+    #btn {
+      
+   
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 12px;
+
+    }
+    #in {
+        border: 1px solid black;
+        border-radius: 50px;
+    
+
+    }
+</style>
+<script type="text/javascript" charset="utf-8">
+    let r = document.getElementById("in");
+    let out = document.getElementById("rad");
+    let btn = document.getElementById("btn");
+    let out2 = document.getElementById("area");
+    let out3 = document.getElementById("per");
+    let out4 = document.getElementById("ppi");
+  
+    
+    
+    function outp() {
+
+        out.innerHTML = r.value;
+    }
+
+    btn.addEventListener('click', outp);
+
+
+    function area() {
+        let a = r.value **2 * Math.PI;
+        out2.innerHTML = a;
+    }
+
+    btn.addEventListener('click', area);
+
+
+    function peri() {
+        let p = 2 * Math.PI* r.value;
+        out3.innerHTML = p;
+
+    }
+
+    btn.addEventListener('click', peri);
+
+    function pi() {
+        let pi = Math.PI;
+        out4.innerHTML = pi;
+    }
+      btn.addEventListener('click', pi);
+      
+      
+      
+    function valid() {
+        if( r.value < 0){
+       
+          out2.innerHTML="Radius must be positive number";
+          out3.innerHTML="Radius must be positive number";
+       
+            
+      }  
+    }
+       btn.addEventListener('click', valid);
+</script>
+</html>
+
